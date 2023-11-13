@@ -6,7 +6,7 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   theme: {
     container: {
       center: true,
@@ -16,7 +16,13 @@ module.exports = {
       },
     },
     extend: {
-       fontFamily: {
+      gridTemplateAreas: {
+        featuresWide: [
+          `leftTop    leftTop    centerTop  centerTop    centerTop    right right`,
+          `leftBottom leftBottom leftBottom centerBottom centerBottom right right`,
+        ],
+      },
+      fontFamily: {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
       },
@@ -76,5 +82,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require('@savvywombat/tailwindcss-grid-areas')
+  ],
 }

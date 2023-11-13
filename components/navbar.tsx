@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ThemeToggle } from '@/components/theme-toggle';
-import {VercelLogoIcon} from '@radix-ui/react-icons'
+import { VercelLogoIcon } from '@radix-ui/react-icons'
 
 
 export const Navbar: React.FC = () => {
@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
           <Link href="/" className="mr-4 shrink-0">
             Shadcn UI
           </Link>
-          <VercelLogoIcon/>
+          <VercelLogoIcon />
 
           {/* Desktop navigation */}
           <nav className="flex grow">
